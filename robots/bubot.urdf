@@ -1,0 +1,1682 @@
+<robot
+  name="bubot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0060056 0.0012944 0.10706"
+        rpy="0 0 0" />
+      <mass
+        value="17.948" />
+      <inertia
+        ixx="0.49516"
+        ixy="0.00045593"
+        ixz="0.019116"
+        iyy="0.50261"
+        iyz="-0.0018032"
+        izz="0.28164" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-1.9163E-14 -1.8329E-10 0.0017023"
+        rpy="0 0 0" />
+      <mass
+        value="0.16038" />
+      <inertia
+        ixx="0.00020995"
+        ixy="1.023E-17"
+        ixz="-2.7876E-17"
+        iyy="0.00020995"
+        iyz="-1.4833E-12"
+        izz="0.00040782" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.1795 -0.08143"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="-1.9088E-14 -1.8329E-10 0.0017023"
+        rpy="0 0 0" />
+      <mass
+        value="0.16038" />
+      <inertia
+        ixx="0.00020995"
+        ixy="1.023E-17"
+        ixz="-2.7866E-17"
+        iyy="0.00020995"
+        iyz="-1.4833E-12"
+        izz="0.00040782" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.1795 -0.08143"
+      rpy="1.5708 0 5.1619E-17" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_front_wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 0 -0.0018426"
+        rpy="0 0 0" />
+      <mass
+        value="0.29253" />
+      <inertia
+        ixx="0.00018232"
+        ixy="-8.4893E-21"
+        ixz="3.0806E-20"
+        iyy="0.00018232"
+        iyz="-2.2066E-21"
+        izz="0.00031096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_front_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_front_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.157 0.0873 -0.09493"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_front_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="right_front_wheel_link">
+    <inertial>
+      <origin
+        xyz="0 1.3878E-17 -0.0018426"
+        rpy="0 0 0" />
+      <mass
+        value="0.29253" />
+      <inertia
+        ixx="0.00018232"
+        ixy="-8.0805E-21"
+        ixz="-1.2719E-22"
+        iyy="0.00018232"
+        iyz="-1.2317E-21"
+        izz="0.00031096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_front_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_front_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_front_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.157 -0.0873 -0.09493"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_front_wheel_link" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="rear_wheel_link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 1.3878E-17 0.0018426"
+        rpy="0 0 0" />
+      <mass
+        value="0.29253" />
+      <inertia
+        ixx="0.00018232"
+        ixy="5.7276E-21"
+        ixz="-3.5642E-20"
+        iyy="0.00018232"
+        iyz="2.7598E-20"
+        izz="0.00031096" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/rear_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/rear_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.157 0 -0.09493"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_wheel_link" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+  </joint>
+  <link
+    name="front_laser_mountpoint_link">
+    <inertial>
+      <origin
+        xyz="-7.8883E-05 -5.6061E-05 -0.031605"
+        rpy="0 0 0" />
+      <mass
+        value="0.14229" />
+      <inertia
+        ixx="7.9975E-05"
+        ixy="7.5633E-08"
+        ixz="2.6339E-08"
+        iyy="8.0169E-05"
+        iyz="1.9908E-07"
+        izz="4.9028E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/front_laser_mountpoint_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/front_laser_mountpoint_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_laser_mountpoint_joint"
+    type="fixed">
+    <origin
+      xyz="0.181 0 -0.01"
+      rpy="-1.5177E-16 3.4738E-16 -5.3596E-15" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_laser_mountpoint_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="torso_yaw_link">
+    <inertial>
+      <origin
+        xyz="-0.021184 3.706E-05 0.13425"
+        rpy="0 0 0" />
+      <mass
+        value="15.384" />
+      <inertia
+        ixx="0.50207"
+        ixy="-4.4759E-06"
+        ixz="-0.036488"
+        iyy="0.46607"
+        iyz="9.7091E-05"
+        izz="0.12009" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/torso_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/torso_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="torso_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.5265"
+      rpy="6.9887E-17 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="torso_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="tray_link">
+    <inertial>
+      <origin
+        xyz="0.18048 0.062172 0.00072834"
+        rpy="0 0 0" />
+      <mass
+        value="2.9807" />
+      <inertia
+        ixx="0.014224"
+        ixy="-0.001329"
+        ixz="-5.3726E-05"
+        iyy="0.019495"
+        iyz="-7.4868E-05"
+        izz="0.011613" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/tray_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/tray_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tray_joint"
+    type="revolute">
+    <origin
+      xyz="0.02548 0 0.028"
+      rpy="-1.5708 -1.5708 0" />
+    <parent
+      link="torso_yaw_link" />
+    <child
+      link="tray_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="0"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="head_yaw_link">
+    <inertial>
+      <origin
+        xyz="0.0016155 -3.2919E-05 0.0099766"
+        rpy="0 0 0" />
+      <mass
+        value="0.18647" />
+      <inertia
+        ixx="0.0007178"
+        ixy="-1.2143E-08"
+        ixz="-9.3422E-06"
+        iyy="0.00071091"
+        iyz="-1.3067E-07"
+        izz="5.101E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/head_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/head_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.30737"
+      rpy="-1.0768E-14 -6.4549E-15 1.2056E-16" />
+    <parent
+      link="torso_yaw_link" />
+    <child
+      link="head_yaw_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="head_pitch_link">
+    <inertial>
+      <origin
+        xyz="0.25102 0.0013554 -0.00012288"
+        rpy="0 0 0" />
+      <mass
+        value="5.5892" />
+      <inertia
+        ixx="0.028845"
+        ixy="0.0013948"
+        ixz="-5.5005E-05"
+        iyy="0.061422"
+        iyz="-9.1334E-06"
+        izz="0.062798" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/head_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/head_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="head_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0545"
+      rpy="-1.5708 -1.5708 0" />
+    <parent
+      link="head_yaw_link" />
+    <child
+      link="head_pitch_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0031287 5.7933E-09 -0.0015198"
+        rpy="0 0 3.14159265359" />
+      <mass
+        value="0.040493" />
+      <inertia
+        ixx="5.3E-06"
+        ixy="3.0082E-12"
+        ixz="-4.2097E-07"
+        iyy="1.3095E-05"
+        iyz="2.9511E-12"
+        izz="1.1942E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.13677 0.0399 0.034249"
+      rpy="1.5708 -1.0617E-14 1.5708" />
+    <parent
+      link="head_pitch_link" />
+    <child
+      link="left_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="right_camera_link">
+    <inertial>
+      <origin
+        xyz="-0.0031287 5.7933E-09 -0.0015198"
+        rpy="0 0 3.14159265359" />
+      <mass
+        value="0.040493" />
+      <inertia
+        ixx="5.3E-06"
+        ixy="3.0082E-12"
+        ixz="-4.2097E-07"
+        iyy="1.3095E-05"
+        iyz="2.9511E-12"
+        izz="1.1942E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_camera_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_camera_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_camera_joint"
+    type="fixed">
+    <origin
+      xyz="0.13677 0.0399 -0.034249"
+      rpy="1.5708 -1.0617E-14 1.5708" />
+    <parent
+      link="head_pitch_link" />
+    <child
+      link="right_camera_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left_arm_shoulder_pitch_link">
+    <inertial>
+      <origin
+        xyz="-2.122E-05 2.4768E-06 -0.041341"
+        rpy="0 0 0" />
+      <mass
+        value="0.29178" />
+      <inertia
+        ixx="0.0005532"
+        ixy="-8.0349E-09"
+        ixz="-4.1962E-07"
+        iyy="0.00066579"
+        iyz="4.5355E-08"
+        izz="0.0001665" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_shoulder_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_shoulder_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.17524 0.28577"
+      rpy="-1.5708 -1.1297E-30 1.6342E-16" />
+    <parent
+      link="torso_yaw_link" />
+    <child
+      link="left_arm_shoulder_pitch_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm_shoulder_roll_link">
+    <inertial>
+      <origin
+        xyz="0.074935 1.8521E-06 -0.0093573"
+        rpy="0 0 0" />
+      <mass
+        value="0.14822" />
+      <inertia
+        ixx="0.00010843"
+        ixy="-5.875E-09"
+        ixz="3.5714E-05"
+        iyy="0.00028771"
+        iyz="4.4939E-10"
+        izz="0.00020531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_shoulder_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_shoulder_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 8.1332E-14 1.5708" />
+    <parent
+      link="left_arm_shoulder_pitch_link" />
+    <child
+      link="left_arm_shoulder_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.8"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-0.8"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm_shoulder_yaw_link">
+    <inertial>
+      <origin
+        xyz="-4.019E-05 -0.0019724 0.038913"
+        rpy="0 0 0" />
+      <mass
+        value="0.15273" />
+      <inertia
+        ixx="0.00010879"
+        ixy="1.4334E-08"
+        ixz="-2.9294E-07"
+        iyy="0.00011571"
+        iyz="1.3784E-06"
+        izz="5.0354E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_shoulder_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_shoulder_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_shoulder_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.1284 0 0"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="left_arm_shoulder_roll_link" />
+    <child
+      link="left_arm_shoulder_yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm_elbow_roll_link">
+    <inertial>
+      <origin
+        xyz="0.055421 -1.7469E-07 -0.013348"
+        rpy="0 0 0" />
+      <mass
+        value="0.22514" />
+      <inertia
+        ixx="9.0356E-05"
+        ixy="-5.4289E-10"
+        ixz="1.6021E-05"
+        iyy="0.00015029"
+        iyz="2.451E-10"
+        izz="9.9881E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_elbow_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_elbow_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_elbow_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.057"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="left_arm_shoulder_yaw_link" />
+    <child
+      link="left_arm_elbow_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm_forearm_yaw_link">
+    <inertial>
+      <origin
+        xyz="-6.6971E-05 -0.0011647 0.037801"
+        rpy="0 0 0" />
+      <mass
+        value="0.25891" />
+      <inertia
+        ixx="0.00013931"
+        ixy="2.0254E-08"
+        ixz="-7.1562E-07"
+        iyy="0.00014955"
+        iyz="9.416E-07"
+        izz="7.1991E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_forearm_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_forearm_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_forearm_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.0859 0 0"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="left_arm_elbow_roll_link" />
+    <child
+      link="left_arm_forearm_yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_arm_wrist_roll_link">
+    <inertial>
+      <origin
+        xyz="0.052471 -0.0052782 -5.4707E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.16057" />
+      <inertia
+        ixx="5.9955E-05"
+        ixy="1.5477E-05"
+        ixz="-2.4925E-07"
+        iyy="9.4951E-05"
+        iyz="-4.601E-07"
+        izz="0.00010267" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_wrist_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_arm_wrist_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_wrist_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0545"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="left_arm_forearm_yaw_link" />
+    <child
+      link="left_arm_wrist_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="left_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.033325 0.0061458 -0.00099123"
+        rpy="0 0 0" />
+      <mass
+        value="0.025912" />
+      <inertia
+        ixx="1.3172E-05"
+        ixy="4.9505E-06"
+        ixz="-8.5595E-07"
+        iyy="2.8112E-05"
+        iyz="-1.5785E-07"
+        izz="2.2617E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/left_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper_joint"
+    type="revolute">
+    <origin
+      xyz="0.057 0.008 0.0001"
+      rpy="-1.1824E-14 4.9751E-17 0.69813" />
+    <parent
+      link="left_arm_wrist_roll_link" />
+    <child
+      link="left_gripper_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm_shoulder_pitch_link">
+    <inertial>
+      <origin
+        xyz="-2.122E-05 2.4768E-06 -0.041341"
+        rpy="0 0 0" />
+      <mass
+        value="0.29178" />
+      <inertia
+        ixx="0.0005532"
+        ixy="-8.0349E-09"
+        ixz="-4.1962E-07"
+        iyy="0.00066579"
+        iyz="4.5355E-08"
+        izz="0.0001665" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_shoulder_pitch_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_shoulder_pitch_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_shoulder_pitch_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.17524 0.28577"
+      rpy="1.5708 -2.1077E-15 -7.7314E-16" />
+    <parent
+      link="torso_yaw_link" />
+    <child
+      link="right_arm_shoulder_pitch_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm_shoulder_roll_link">
+    <inertial>
+      <origin
+        xyz="0.074935 1.8525E-06 -0.0093573"
+        rpy="0 0 0" />
+      <mass
+        value="0.14822" />
+      <inertia
+        ixx="0.00010843"
+        ixy="-5.8706E-09"
+        ixz="3.5714E-05"
+        iyy="0.00028771"
+        iyz="4.4884E-10"
+        izz="0.00020531" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_shoulder_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_shoulder_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_shoulder_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 -7.4349E-14 -1.5708" />
+    <parent
+      link="right_arm_shoulder_pitch_link" />
+    <child
+      link="right_arm_shoulder_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="0"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="0"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm_shoulder_yaw_link">
+    <inertial>
+      <origin
+        xyz="-2.5442E-05 0.0019765 0.038913"
+        rpy="0 0 0" />
+      <mass
+        value="0.15273" />
+      <inertia
+        ixx="0.00010878"
+        ixy="-5.4534E-09"
+        ixz="-3.9552E-07"
+        iyy="0.00011571"
+        iyz="-1.3831E-06"
+        izz="5.0351E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_shoulder_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_shoulder_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_shoulder_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.1284 0 0"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="right_arm_shoulder_roll_link" />
+    <child
+      link="right_arm_shoulder_yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm_elbow_roll_link">
+    <inertial>
+      <origin
+        xyz="0.055421 -1.7469E-07 -0.013348"
+        rpy="0 0 0" />
+      <mass
+        value="0.22514" />
+      <inertia
+        ixx="9.0356E-05"
+        ixy="-5.4289E-10"
+        ixz="1.6021E-05"
+        iyy="0.00015029"
+        iyz="2.451E-10"
+        izz="9.9881E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_elbow_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_elbow_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_elbow_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.057"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="right_arm_shoulder_yaw_link" />
+    <child
+      link="right_arm_elbow_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm_forearm_yaw_link">
+    <inertial>
+      <origin
+        xyz="-5.8271E-05 0.0011647 0.037801"
+        rpy="0 0 0" />
+      <mass
+        value="0.25891" />
+      <inertia
+        ixx="0.00013931"
+        ixy="-1.7513E-08"
+        ixz="-8.1508E-07"
+        iyy="0.00014955"
+        iyz="-9.416E-07"
+        izz="7.1991E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_forearm_yaw_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_forearm_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_forearm_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="0.0859 0 0"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="right_arm_elbow_roll_link" />
+    <child
+      link="right_arm_forearm_yaw_link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_arm_wrist_roll_link">
+    <inertial>
+      <origin
+        xyz="0.052471 0.0052782 -5.4708E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.16057" />
+      <inertia
+        ixx="5.9955E-05"
+        ixy="-1.5477E-05"
+        ixz="-2.4926E-07"
+        iyy="9.4951E-05"
+        iyz="4.601E-07"
+        izz="0.00010267" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_wrist_roll_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_arm_wrist_roll_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_wrist_roll_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0545"
+      rpy="3.14159265359 -1.5708 0" />
+    <parent
+      link="right_arm_forearm_yaw_link" />
+    <child
+      link="right_arm_wrist_roll_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="-1.5708"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+  <link
+    name="right_gripper_link">
+    <inertial>
+      <origin
+        xyz="0.033325 -0.0061458 -0.00099123"
+        rpy="0 0 0" />
+      <mass
+        value="0.025912" />
+      <inertia
+        ixx="1.3172E-05"
+        ixy="-4.9505E-06"
+        ixz="-8.5595E-07"
+        iyy="2.8112E-05"
+        iyz="1.5785E-07"
+        izz="2.2617E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_gripper_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bubot/meshes/right_gripper_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_gripper_joint"
+    type="revolute">
+    <origin
+      xyz="0.057 -0.008 0.0001"
+      rpy="7.7276E-16 -1.2947E-14 -0.69813" />
+    <parent
+      link="right_arm_wrist_roll_link" />
+    <child
+      link="right_gripper_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.5708"
+      effort="1"
+      velocity="1" />
+    <dynamics
+      damping="1"
+      friction="1" />
+    <safety_controller
+      soft_upper="1.5708"
+      soft_lower="0"
+      k_position="1"
+      k_velocity="1" />
+  </joint>
+</robot>
