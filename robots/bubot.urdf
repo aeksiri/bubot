@@ -95,12 +95,7 @@
     <limit
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_wheel_link">
@@ -157,12 +152,7 @@
     <limit
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_front_wheel_link">
@@ -216,9 +206,7 @@
       link="left_front_wheel_link" />
     <axis
       xyz="0 0 1" />
-    <dynamics
-      damping="0"
-      friction="0" />
+
   </joint>
   <link
     name="right_front_wheel_link">
@@ -272,9 +260,7 @@
       link="right_front_wheel_link" />
     <axis
       xyz="0 0 -1" />
-    <dynamics
-      damping="0"
-      friction="0" />
+
   </joint>
   <link
     name="rear_wheel_link">
@@ -328,9 +314,7 @@
       link="rear_wheel_link" />
     <axis
       xyz="0 0 1" />
-    <dynamics
-      damping="0"
-      friction="0" />
+
   </joint>
   <link
     name="front_laser_mountpoint_link">
@@ -442,14 +426,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="tray_link">
@@ -508,14 +485,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="head_yaw_link">
@@ -574,14 +544,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="head_pitch_link">
@@ -640,14 +603,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_camera_link">
@@ -812,14 +768,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_arm_shoulder_roll_link">
@@ -878,14 +827,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-0.8"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_arm_shoulder_yaw_link">
@@ -944,14 +886,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_arm_elbow_roll_link">
@@ -1010,14 +945,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_arm_forearm_yaw_link">
@@ -1076,14 +1004,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_arm_wrist_roll_link">
@@ -1142,14 +1063,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="left_gripper_link">
@@ -1208,14 +1122,7 @@
       upper="0"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="0"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_arm_shoulder_pitch_link">
@@ -1274,14 +1181,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_arm_shoulder_roll_link">
@@ -1340,14 +1240,7 @@
       upper="0"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="0"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_arm_shoulder_yaw_link">
@@ -1406,14 +1299,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_arm_elbow_roll_link">
@@ -1472,14 +1358,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_arm_forearm_yaw_link">
@@ -1538,14 +1417,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_arm_wrist_roll_link">
@@ -1604,14 +1476,7 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="-1.5708"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
   <link
     name="right_gripper_link">
@@ -1670,13 +1535,6 @@
       upper="1.5708"
       effort="1"
       velocity="1" />
-    <dynamics
-      damping="0"
-      friction="0" />
-    <safety_controller
-      soft_upper="1.5708"
-      soft_lower="0"
-      k_position="0"
-      k_velocity="0" />
+
   </joint>
 </robot>

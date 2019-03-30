@@ -201,24 +201,119 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
       Frame Timeout: 15
       Frames:
         All Enabled: true
-      Marker Scale: 0.5
+        base_footprint:
+          Value: true
+        base_link:
+          Value: true
+        front_laser_mountpoint_link:
+          Value: true
+        head_pitch_link:
+          Value: true
+        head_yaw_link:
+          Value: true
+        left_arm_elbow_roll_link:
+          Value: true
+        left_arm_forearm_yaw_link:
+          Value: true
+        left_arm_shoulder_pitch_link:
+          Value: true
+        left_arm_shoulder_roll_link:
+          Value: true
+        left_arm_shoulder_yaw_link:
+          Value: true
+        left_arm_wrist_roll_link:
+          Value: true
+        left_camera_link:
+          Value: true
+        left_front_wheel_link:
+          Value: true
+        left_gripper_link:
+          Value: true
+        left_wheel_link:
+          Value: true
+        rear_wheel_link:
+          Value: true
+        right_arm_elbow_roll_link:
+          Value: true
+        right_arm_forearm_yaw_link:
+          Value: true
+        right_arm_shoulder_pitch_link:
+          Value: true
+        right_arm_shoulder_roll_link:
+          Value: true
+        right_arm_shoulder_yaw_link:
+          Value: true
+        right_arm_wrist_roll_link:
+          Value: true
+        right_camera_link:
+          Value: true
+        right_front_wheel_link:
+          Value: true
+        right_gripper_link:
+          Value: true
+        right_wheel_link:
+          Value: true
+        torso_yaw_link:
+          Value: true
+        tray_link:
+          Value: true
+      Marker Scale: 0.25
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        base_link:
+          base_footprint:
+            {}
+          front_laser_mountpoint_link:
+            {}
+          left_front_wheel_link:
+            {}
+          left_wheel_link:
+            {}
+          rear_wheel_link:
+            {}
+          right_front_wheel_link:
+            {}
+          right_wheel_link:
+            {}
+          torso_yaw_link:
+            head_yaw_link:
+              head_pitch_link:
+                left_camera_link:
+                  {}
+                right_camera_link:
+                  {}
+            left_arm_shoulder_pitch_link:
+              left_arm_shoulder_roll_link:
+                left_arm_shoulder_yaw_link:
+                  left_arm_elbow_roll_link:
+                    left_arm_forearm_yaw_link:
+                      left_arm_wrist_roll_link:
+                        left_gripper_link:
+                          {}
+            right_arm_shoulder_pitch_link:
+              right_arm_shoulder_roll_link:
+                right_arm_shoulder_yaw_link:
+                  right_arm_elbow_roll_link:
+                    right_arm_forearm_yaw_link:
+                      right_arm_wrist_roll_link:
+                        right_gripper_link:
+                          {}
+            tray_link:
+              {}
       Update Interval: 0
-      Value: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base_link
+    Fixed Frame: base_footprint
     Frame Rate: 30
   Name: root
   Tools:
@@ -239,25 +334,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.81950104
+      Distance: 1.7674768
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.107762568
-        Y: 0.0373300835
-        Z: 0.642336428
+        X: 0.0467622057
+        Y: 0.016191503
+        Z: 0.760829628
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.364796311
+      Pitch: 0.354796886
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.745397627
+      Yaw: 0.600401998
     Saved: ~
 Window Geometry:
   Displays:
